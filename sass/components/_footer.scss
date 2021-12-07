@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  width: 231px;
+}
+.join-us-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 206px;
+  margin-left: 70px;
+  margin-right: 93px;
+}
+
+.join-us-text {
+  color: #ffffff;
+  font-weight: 700;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+
+  margin-top: 12px;
+}

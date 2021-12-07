@@ -1,0 +1,32 @@
+@import './utils/variables';
+@import './utils/base-styles';
+@import './utils/geometry';
+@import './utils/visually-hidden';
+@import './utils/button';
+
+@import './components/header/header';
+@import './components/header/header-logo';
+@import './components/header/navigation';
+@import './components/header/contacts-header';
+@import './components/header/icon-header';
+
+@import './components/hero';
+@import './components/modal';
+@import './components/form-hero';
+@import './components/features';
+@import './components/duties';
+@import './components/team';
+@import './components/reqular-customers';
+
+@import './components/social-link';
+
+@import './components/footer';
+@import './components/form-footer';
+@import './components/footer-contacts';
+@import './components/footer-logo';
+@import './components/icon-footer';
+
+@import './components/menue-portfolio';
+@import './components/photo';
+@import './components/overlay';
+@import './components/text';
