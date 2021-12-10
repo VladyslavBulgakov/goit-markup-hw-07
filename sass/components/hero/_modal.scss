@@ -40,31 +40,32 @@
   transition: transform 250ms var(--transition-timing-function);
 }
 
-.button-close-modal {
+.modal__button-position {
   position: absolute;
   right: 8px;
   top: 8px;
-
-  width: 30px;
-  height: 30px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: #fff;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
   transition: fill 250ms var(--transition-timing-function);
 }
 
-.button-close-modal:hover,
-.button-close-modal:focus {
-  fill: var(--accent-color);
+.modal__button-close {
+  width: 30px;
+  height: 30px;
+
+  background-color: var(--bcg-list-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
-.icon-close-black {
+.modal__icon-close {
   width: 18px;
   height: 18px;
 

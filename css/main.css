@@ -81,13 +81,29 @@ footer {
 }
 
 button {
-  display: inline-block;
+  display: block;
   font-family: inherit;
-  cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   padding: 0;
   margin: 0;
+  cursor: pointer;
+  border: transparent;
   border-radius: 4px;
-  border: 1px solid transparent;
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  display: block;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .page-header {
@@ -103,18 +119,8 @@ button {
 }
 
 .header-logo {
-  font-family: Raleway, sans-serif;
-  display: block;
   color: var(--title-text-color);
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
   transition: color 250ms var(--transition-timing-function);
-}
-
-.header-logo--geometry {
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .header-logo:hover, .header-logo:focus, .header-logo:active {
@@ -125,19 +131,19 @@ button {
   color: var(--accent-color);
 }
 
-.menue {
+.logo_padding {
+  padding: 24px 0 25px 0;
+}
+
+.navigation-menue {
   margin-left: 93px;
 }
 
-.menue__item {
-  position: relative;
-}
-
-.menue__item + .menue__item {
+.navigation-menue__item + .navigation-menue__item {
   margin-left: 50px;
 }
 
-.menue__link {
+.navigation-menue__link {
   display: block;
   width: 100%;
   color: var(--title-text-color);
@@ -147,11 +153,16 @@ button {
   transition: color 250ms var(--transition-timing-function);
 }
 
-.menue__link:hover, .menue__link:focus, .menue__link:active {
+.navigation-menue__link:hover, .navigation-menue__link:focus, .navigation-menue__link:active {
   color: var(--accent-color);
 }
 
-.menue__link::after {
+.navigation-menue__link_geometry {
+  padding: 32px 0px;
+  position: relative;
+}
+
+.navigation-menue__link_geometry::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -163,15 +174,10 @@ button {
   transition: background-color 250ms var(--transition-timing-function), transform 250ms var(--transition-timing-function);
 }
 
-.menue__link:hover::after, .menue__link:focus::after {
+.navigation-menue__link_geometry:hover::after, .navigation-menue__link_geometry:focus::after {
   background-color: var(--accent-color);
   opacity: 1;
   transform: scaleX(1);
-}
-
-.link--geometry {
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .current:after {
@@ -187,26 +193,29 @@ button {
 }
 
 .contacts-header {
-  display: flex;
   margin-left: auto;
 }
 
 .contacts-header__item + .contacts-header__item {
-  margin: 0 0 0 30px;
+  margin-left: 30px;
 }
 
 .contacts-header__link {
-  display: flex;
   align-items: center;
   color: currentColor;
+  font-size: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms var(--transition-timing-function);
 }
 
-.contacts-header:hover, .contacts-header:focus {
+.contacts-header__link:hover, .contacts-header__link:focus {
   color: var(--accent-color);
+}
+
+.contacts-header__link_padding {
+  padding: 32px 0;
 }
 
 .contacts-header__icon {
@@ -220,13 +229,13 @@ button {
   fill: var(--accent-color);
 }
 
-.hero-section {
+.hero {
   text-align: center;
   padding: 200px 0 200px 0;
   background-color: var(--bcg-section-color);
 }
 
-.hero-text {
+.hero__text {
   color: #ffffff;
   width: 696px;
   font-weight: 900;
@@ -238,39 +247,6 @@ button {
   margin-left: auto;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero-overlay {
-  max-width: 1600px;
-  max-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.order {
-  display: inline-block;
-  text-align: center;
-  color: #ffffff;
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding: 10px 32px 10px 32px;
-  border-radius: 4px;
-  transition: box-shadow 250ms var(--transition-timing-function);
-}
-
-.order:hover,
-.order:focus,
-.order:active {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .backdrop {
@@ -308,27 +284,29 @@ button {
   transition: transform 250ms var(--transition-timing-function);
 }
 
-.button-close-modal {
+.modal__button-position {
   position: absolute;
   right: 8px;
   top: 8px;
-  width: 30px;
-  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
   transition: fill 250ms var(--transition-timing-function);
 }
 
-.button-close-modal:hover,
-.button-close-modal:focus {
+.modal__button-close {
+  width: 30px;
+  height: 30px;
+  background-color: var(--bcg-list-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal__button-close:hover, .modal__button-close:focus {
   fill: var(--accent-color);
 }
 
-.icon-close-black {
+.modal__icon-close {
   width: 18px;
   height: 18px;
   display: flex;
@@ -338,34 +316,30 @@ button {
   margin: 0;
 }
 
+.modal-tile {
+  display: block;
+  width: 448px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--title-text-color);
+  margin-bottom: 30px;
+}
+
 .modal-form {
   padding: 0;
   margin: 0;
   width: 448px;
 }
 
-.modal-tile {
-  color: var(--title-text-color);
-  text-align: center;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  margin-bottom: 30px;
-}
-
-.form-field {
+.modal-form__label {
   display: block;
   position: relative;
   margin-bottom: 28px;
 }
 
-.form-field-email {
-  display: block;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.form-input-modal {
+.modal-form__input {
   width: 100%;
   height: 40px;
   padding: 0 0 0 42px;
@@ -375,7 +349,7 @@ button {
   background-color: #fff;
 }
 
-.form-text-modal {
+.modal-form__text {
   position: absolute;
   top: 50%;
   left: 42px;
@@ -387,7 +361,7 @@ button {
   transition: transform 250ms var(--transition-timing-function);
 }
 
-.form-icon-modal {
+.modal-form__icon {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -400,32 +374,29 @@ button {
   height: 18px;
 }
 
-.form-field > .form-icon-modal,
-.form-field-email > .form-icon-modal {
+.modal-form__label > .modal-form__icon {
   transition: fill 250ms var(--transition-timing-function);
 }
 
-.form-field:focus-within > .form-icon-modal,
-.form-field-email:focus-within > .form-icon-modal {
+.modal-form__label:focus-within > .modal-form__icon {
   fill: var(--accent-color);
 }
 
-.form-field:focus-within > .form-text-modal,
-.form-field-email:focus-within > .form-text-modal,
-.form-input-modal:not(:placeholder-shown) + .form-text-modal {
+.modal-form__label:focus-within > .modal-form__text,
+.modal-form__input:not(:placeholder-shown) + .modal-form__text {
   transform: translateY(-37px) translateX(-42px);
 }
 
-.form-input-modal:not(:placeholder-shown) {
+.modal-form__input:not(:placeholder-shown) {
   cursor: auto;
 }
 
-.form-input-modal:focus {
+.modal-form__input:focus {
   outline-color: var(--accent-color);
 }
 
 /* textarea-comment-label*/
-.textarea-comment-label {
+.textarea {
   display: block;
   font-size: 12px;
   line-height: 1.16;
@@ -433,7 +404,7 @@ button {
   margin-bottom: 20px;
 }
 
-.comment-modal {
+.textarea__comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
@@ -444,20 +415,24 @@ button {
   border-radius: 4px;
 }
 
-.comment-modal::placeholder {
+.textarea__comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
   line-height: 1.14;
   letter-spacing: 0.01em;
 }
 
 /* checkbox-modal */
-.checkbox-label {
+.checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.checkbox-icon {
+.checkbox-margin {
+  margin-bottom: 30px;
+}
+
+.checkbox__icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -467,11 +442,11 @@ button {
   transition: background-color 250ms var(--transition-timing-function), border 250ms var(--transition-timing-function);
 }
 
-.checkbox-modal:focus + .checkbox-icon {
+.checkbox__input:focus + .checkbox__icon {
   outline: 2px solid var(--title-text-color);
 }
 
-.checkbox-modal:checked + .checkbox-icon {
+.checkbox__input:checked + .checkbox__icon {
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
   background-image: url("../images/icon-check.svg");
@@ -481,7 +456,7 @@ button {
   background-origin: border-box;
 }
 
-.checkbox-modal {
+.checkbox__input-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -497,9 +472,6 @@ button {
 .user-agreement {
   text-decoration: underline;
   color: var(--accent-color);
-}
-
-.user-agreement {
   transition: color 250ms var(--transition-timing-function);
 }
 
@@ -507,56 +479,35 @@ button {
   color: var(--primary-text-color);
 }
 
-/* button-modal */
-.button-modal {
-  display: block;
-  width: 200px;
-  height: 50px;
-  position: relative;
-  overflow: hidden;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  text-align: center;
-  margin-top: 30px;
+/* button-form */
+.modal-form__button {
+  background-color: var(--accent-color);
+  margin: auto auto;
+}
+
+.hero-overlay {
+  max-width: 1600px;
+  max-height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__button {
   background-color: var(--accent-color);
-  border-radius: 4px;
   transition: box-shadow 250ms var(--transition-timing-function);
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.button-modal::after {
-  content: '';
-  position: absolute;
-  /* top: var(--x);
-  left: var(--y); */
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  z-index: 1;
-  transition: width 1s ease, height 1s ease;
-  background-color: rgba(80, 97, 155, 0.302);
-  z-index: 1;
-}
-
-.button-modal:hover:after {
-  width: 500px;
-  height: 500px;
-}
-
-.button-modal:hover,
-.button-modal:focus,
-.button-modal:active {
+.hero__button:hover, .hero__button:focus, .hero__button:active {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.features {
+.features-padding {
   padding-bottom: 0;
 }
 

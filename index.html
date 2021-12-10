@@ -23,26 +23,37 @@
       <!--Navigation section-->
       <div class="container container-flex">
         <nav class="navigation container-flex">
-          <a href="./index.html" class="header-logo header-logo--geometry"
+          <a href="./index.html" class="header-logo logo logo_padding"
             ><span class="header-logo__accent">Web</span>Studio</a
           >
 
           <!--Menu of navigation-->
-          <ul class="menue container-flex">
-            <li class="menue__item">
-              <a href="" class="menue__link link--geometry current">Студия</a>
+          <ul class="navigation-menue container-flex">
+            <li class="navigation-menue__item">
+              <a href="#" class="navigation-menue__link navigation-menue__link_geometry current"
+                >Студия</a
+              >
             </li>
-            <li class="menue__item">
-              <a href="./portfolio.html" class="menue__link link--geometry">Портфолио</a>
+            <li class="navigation-menue__item">
+              <a
+                href="./portfolio.html"
+                class="navigation-menue__link navigation-menue__link_geometry"
+                >Портфолио</a
+              >
             </li>
-            <li class="menue__item"><a href="" class="menue__link link--geometry">Контакты</a></li>
+            <li class="navigation-menue__item">
+              <a href="" class="navigation-menue__link navigation-menue__link_geometry">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <!--Contacts-->
-        <ul class="contacts-header">
+        <ul class="contacts-header container-flex">
           <li class="contacts-header__item">
-            <a href="mailto:info@devstudio.com" class="contacts-header__link link--geometry">
+            <a
+              href="mailto:info@devstudio.com"
+              class="contacts-header__link contacts-header__link_padding container-flex"
+            >
               <svg class="contacts-header__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
@@ -50,7 +61,10 @@
             </a>
           </li>
           <li class="contacts-header__item">
-            <a href="tel:+380961111111" class="contacts-header__link link--geometry">
+            <a
+              href="tel:+380961111111"
+              class="contacts-header__link contacts-header__link_padding container-flex"
+            >
               <svg class="contacts-header__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
@@ -64,18 +78,19 @@
     <!--Main section-->
     <main>
       <!-- Hero -->
-
-      <section class="hero-section hero-overlay">
+      <section class="hero hero-overlay">
         <div class="container">
-          <h1 class="hero-text">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-          <button type="button" class="order" data-modal-open>Заказать услугу</button>
+          <h1 class="hero__text">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
+          <button type="button" class="hero__button button" data-modal-open>
+            <span class="button__text">Заказать услугу</span>
+          </button>
         </div>
       </section>
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="button-close-modal" data-modal-close>
-            <div class="icon-close-black">
+          <button class="modal__button-close modal__button-position" data-modal-close>
+            <div class="modal__icon-close">
               <svg width="11" height="11">
                 <use href="./images/sprite.svg#icon-close-black"></use>
               </svg>
@@ -86,72 +101,73 @@
             <p class="modal-tile">Оставьте свои данные, мы вам перезвоним</p>
 
             <form action="#" class="modal-form" autocomplete="off">
-              <label class="form-field">
-                <input class="form-input-modal" type="name" name="name" placeholder=" " required />
-                <span class="form-text-modal">Имя</span>
+              <label class="form-field modal-form__label">
+                <input class="modal-form__input" type="name" name="name" placeholder=" " required />
+                <span class="modal-form__text">Имя</span>
 
-                <span class="form-icon-modal">
+                <span class="modal-form__icon">
                   <svg width="12" height="12">
                     <use href="./images/sprite.svg#icon-namemodal "></use>
                   </svg>
                 </span>
               </label>
 
-              <label class="form-field">
-                <input class="form-input-modal" type="tel" name="tel" placeholder=" " required />
-                <span class="form-text-modal">Телефон</span>
-                <span class="form-icon-modal">
+              <label class="form-field modal-form__label">
+                <input class="modal-form__input" type="tel" name="tel" placeholder=" " required />
+                <span class="modal-form__text">Телефон</span>
+
+                <span class="modal-form__icon">
                   <svg width="13" height="13">
                     <use href="./images/sprite.svg#icon-phonemodal "></use>
                   </svg>
                 </span>
               </label>
 
-              <label class="form-field-email">
+              <label class="form-field-email modal-form__label">
                 <input
-                  class="form-input-modal"
+                  class="modal-form__input"
                   type="email"
                   name="email"
                   placeholder=" "
                   required
                 />
-                <span class="form-text-modal">Почта</span>
-                <span class="form-icon-modal">
+                <span class="modal-form__text">Почта</span>
+                <span class="modal-form__icon">
                   <svg width="15" height="12">
                     <use href="./images/sprite.svg#icon-emailmodal "></use>
                   </svg>
                 </span>
               </label>
 
-              <label class="textarea-comment-label">
+              <label class="textarea">
                 Комментарий
                 <textarea
-                  class="comment-modal"
+                  class="textarea__comment"
                   name="comment"
                   rows="10"
                   placeholder="Введите текст"
                 ></textarea>
               </label>
 
-              <label class="checkbox-label">
+              <label class="checkbox checkbox-margin">
                 <input
                   type="checkbox"
                   name="user-agreement"
                   value="user-agreement"
-                  class="checkbox-modal"
+                  class="checkbox__input checkbox__input-hidden"
                 />
-                <span class="checkbox-icon"></span>
+                <span class="checkbox__icon"></span>
 
                 Соглашаюсь с рассылкой и принимаю
                 <a href="#" class="user-agreement"> Условия договора </a>
               </label>
 
-              <button type="submit" class="button-modal">
-                <span>Отправить</span>
+              <button type="submit" class="modal-form__button button">
+                <span class="button__text">Отправить</span>
               </button>
 
-              <script>
-                let button = document.querySelector('.button-modal');
+              <!-- <script>
+                let button = document.querySelector('.modal-form__button');
 
                 button.onmousemove = e => {
                   let x = e.pageX - e.target.offsetLeft;
@@ -160,7 +176,7 @@
                   button.style.setProperty('--x', x + 'px');
                   button.style.setProperty('--y', y + 'px');
                 };
-              </script>
+              </script> -->
             </form>
           </div>
         </div>
@@ -168,7 +184,7 @@
 
       <!--Features-->
 
-      <section class="features section">
+      <section class="features-padding section">
         <div class="container">
           <!--Через сss скрыт заголовок этой секции-->
           <h2 class="visually-hidden">Наши преимущества</h2>

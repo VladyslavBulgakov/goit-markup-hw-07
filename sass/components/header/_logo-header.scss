@@ -1,0 +1,19 @@
+.header-logo {
+  color: var(--title-text-color);
+
+  transition: color 250ms var(--transition-timing-function);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
+}
+
+.header-logo__accent {
+  color: var(--accent-color);
+}
+
+.logo_padding {
+  padding: 24px 0 25px 0;
+}

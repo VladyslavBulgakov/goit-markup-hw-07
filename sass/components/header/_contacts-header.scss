@@ -1,23 +1,27 @@
 .contacts-header {
-  display: flex;
   margin-left: auto;
 
   &__item + &__item {
-    margin: 0 0 0 30px;
+    margin-left: 30px;
   }
-  &__link {
-    display: flex;
-    align-items: center;
+}
 
-    color: currentColor;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+.contacts-header__link {
+  align-items: center;
 
-    transition: color 250ms var(--transition-timing-function);
-  }
+  color: currentColor;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms var(--transition-timing-function);
+
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  &_padding {
+    padding: 32px 0;
   }
 }
