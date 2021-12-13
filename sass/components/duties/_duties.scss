@@ -1,31 +1,21 @@
-.duties-title {
+.title_duties {
   color: var(--title-text-color);
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
 
   margin-top: 0;
   margin-bottom: 50px;
-}
-.duties-image {
-  display: flex;
-  padding-left: 0;
+
+  text-align: center;
 }
 
-.duties-item {
-  align-items: center;
-}
-
-.image-item:not(:last-child) {
+.duties__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.image-item-position {
+.duties__image_position_relative {
   position: relative;
 }
 
-.image-description {
+.duties__image_position_absolute {
   position: absolute;
   bottom: 0;
   left: 0;

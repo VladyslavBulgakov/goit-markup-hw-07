@@ -16,3 +16,10 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.item-size {
+  width: 270px;
+}
+.item-mr:not(:last-child) {
+  margin-right: 30px;
+}

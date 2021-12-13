@@ -1,12 +1,11 @@
-.navigation-menue {
+.navigation__list {
   margin-left: 93px;
-
-  &__item + &__item {
-    margin-left: 50px;
-  }
+}
+.navigation__item + .navigation__item {
+  margin-left: 50px;
 }
 
-.navigation-menue__link {
+.navigation__link {
   display: block;
   width: 100%;
 
@@ -23,7 +22,7 @@
     color: var(--accent-color);
   }
 }
-.navigation-menue__link_geometry {
+.navigation__link_geometry {
   padding: 32px 0px;
   position: relative;
 

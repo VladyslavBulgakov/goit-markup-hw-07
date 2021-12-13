@@ -76,3 +76,23 @@
   padding: 0;
   margin: 0;
 }
+
+.modal-form__button {
+  display: block;
+  background-color: var(--accent-color);
+  color: #ffffff;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  padding: 10px 55px 10px 56px;
+
+  border-radius: 4px;
+
+  margin-right: auto;
+  margin-left: auto;
+  transition: box-shadow 250ms var(--transition-timing-function);
+}
+
+.modal-form__button:active {
+  box-shadow: none;
+}

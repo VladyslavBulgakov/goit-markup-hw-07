@@ -31,8 +31,18 @@ img {
   height: auto;
 }
 
-footer {
+.footer {
   background-color: var(--bcg-section-color);
 
   padding: 60px 60px;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid transparent;
 }

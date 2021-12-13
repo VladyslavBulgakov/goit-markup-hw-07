@@ -3,6 +3,7 @@
 @import './utils/geometry';
 @import './utils/visually-hidden';
 @import './utils/button';
+@import './components/title';
 @import './components/logo';
 
 @import './components/header/page-header';
@@ -18,19 +19,18 @@
 @import './components/hero/hero-button';
 
 @import './components/features/features';
-@import './components/duties';
-@import './components/team';
-@import './components/reqular-customers';
+@import './components/duties/duties';
 
-@import './components/social-link';
+@import './components/team/team';
+@import './components/social-bar';
 
-@import './components/footer';
-@import './components/form-footer';
-@import './components/footer-contacts';
-@import './components/footer-logo';
-@import './components/icon-footer';
+@import './components/customers/reqular-customers';
 
-@import './components/menue-portfolio';
-@import './components/photo';
-@import './components/overlay';
-@import './components/text';
+@import './components/footer/footer';
+@import './components/footer/form-footer';
+@import './components/footer/adress';
+@import './components/footer/footer-logo';
+@import './components/footer/footer__social-bar';
+
+@import './components/portfolio/buttons-bar_portfolio';
+@import './components/portfolio/photo';

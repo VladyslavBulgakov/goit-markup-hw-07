@@ -23,35 +23,43 @@
       <!--Navigation section-->
       <div class="container container-flex">
         <nav class="navigation container-flex">
-          <a href="./index.html" class="header-logo header-logo--geometry"
-            ><span class="header-logo_accent">Web</span>Studio</a
+          <a href="./index.html" class="logo header-logo logo-padding"
+            ><span class="logo__accent">Web</span>Studio</a
           >
 
           <!--Menu of navigation-->
-          <ul class="menue container-flex">
-            <li class="menue_item">
-              <a href="./index.html" class="menue_link link--geometry">Студия</a>
+          <ul class="navigation__list container-flex">
+            <li class="navigation__item">
+              <a href="./index.html" class="navigation__link navigation__link_geometry">Студия</a>
             </li>
-            <li class="menue_item">
-              <a href="./portfolio.html" class="menue_link link--geometry current">Портфолио</a>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link_geometry current">Портфолио</a>
             </li>
-            <li class="menue_item"><a href="" class="menue_link link--geometry">Контакты</a></li>
+            <li class="navigation__item">
+              <a href="" class="navigation__link navigation__link_geometry">Контакты</a>
+            </li>
           </ul>
         </nav>
 
         <!--Contacts-->
-        <ul class="contacts">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="contact-email">
-              <svg class="icon-envelope" width="16" height="12">
+        <ul class="contacts-header container-flex">
+          <li class="contacts-header__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="contacts-header__link contacts-header__link_padding container-flex"
+            >
+              <svg class="contacts-header__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="contact-phone">
-              <svg class="icon-smartphone" width="10" height="16">
+          <li class="contacts-header__item">
+            <a
+              href="tel:+380961111111"
+              class="contacts-header__link contacts-header__link_padding container-flex"
+            >
+              <svg class="contacts-header__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -60,7 +68,6 @@
         </ul>
       </div>
     </header>
-
     <!--Main portfolio-->
     <main class="main-portfolio">
       <!--Projects section-->
@@ -68,29 +75,31 @@
       <section class="section">
         <!--Portfoio buttons-->
         <div class="container">
-          <ul class="buttons-section">
-            <li class="filter"><button type="button" class="button-portfolio all">Все</button></li>
-            <li class="filter">
-              <button type="button" class="button-portfolio sites">Веб-сайты</button>
+          <ul class="buttons-bar">
+            <li class="buttons-bar__item filter">
+              <button type="button" class="buttons-bar__button">Все</button>
             </li>
-            <li class="filter">
-              <button type="button" class="button-portfolio apps">Приложения</button>
+            <li class="buttons-bar__item filter">
+              <button type="button" class="buttons-bar__button">Веб-сайты</button>
             </li>
-            <li class="filter">
-              <button type="button" class="button-portfolio design">Дизайн</button>
+            <li class="buttons-bar__item filter">
+              <button type="button" class="buttons-bar__button">Приложения</button>
             </li>
-            <li class="filter">
-              <button type="button" class="button-portfolio marketing">Маркетинг</button>
+            <li class="buttons-bar__item filter">
+              <button type="button" class="buttons-bar__button">Дизайн</button>
+            </li>
+            <li class="buttons-bar__item filter">
+              <button type="button" class="buttons-bar__button">Маркетинг</button>
             </li>
           </ul>
 
           <h1 class="visually-hidden">Проекты</h1>
           <!--Portfolio Photos Section-->
 
-          <ul class="portfolio-photos">
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+          <ul class="portfolio-cards">
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/technokryak.jpg"
                     alt="Ноутбук, сайт проекта"
@@ -98,8 +107,8 @@
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
                       Технокряк это современная площадка распространения коронавируса. Компании
                       используют эту платформу для цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
@@ -107,213 +116,216 @@
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Технокряк</h2>
-                  <p class="photo-text">Веб-сайт</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/neworleanvsgoldenstar.jpg"
-                    alt="Баскетболисты сражаются за мяч"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum ut dolore
-                      ipsam maxime excepturi voluptatem architecto aliquid natus ad, illo voluptatum
-                      ducimus, officiis assumenda quod repellendus illum nam quia.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">
-                    Постер <span lang="en">New Orlean vs Golden Star</span>
-                  </h2>
-                  <p class="photo-text">Дизайн</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
 
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/retaurantseafood.jpg"
-                    alt="Логотип, рыба, название ресторана"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit recusandae
-                      minima inventore ea? Possimus suscipit impedit facere. Nesciunt nulla minima
-                      aspernatur quam quia qui amet enim nobis! Illum, deserunt dignissimos.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="photo-text">Приложение</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/prime.jpg"
-                    alt="Музыкальная гарнитура"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Проект <span lang="en">Prime</span></h2>
-                  <p class="photo-text">Маркетинг</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/boxes.jpg"
-                    alt="Коробки с логотипами"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Проект <span lang="en">Boxes</span></h2>
-                  <p class="photo-text">Приложение</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/inspirationhasnoborders.jpg"
-                    alt="Монитор, отображение главной страницы проекта"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title" lang="en">Inspiration has no Borders</h2>
-                  <p class="photo-text">Веб-сайт</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/limitededition.jpg"
-                    alt="Книга изображениями и кратким текстовым наполнением"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Издание <span lang="en">Limited Edition</span></h2>
-                  <p class="photo-text">Дизайн</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/lab.jpg"
-                    alt="Ярлык с контекстной информацией"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Проект <span>LAB</span></h2>
-                  <p class="photo-text">Маркетинг</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a href="" class="photo-link">
-                <div class="portfolio-image">
+
+            <li class="portfolio-cards__item">
+              <a href="" class="portfolio-cards__link">
+                <div class="portfolio-cards__image">
                   <img
                     src="./images/portfolio/grovingbuisness.jpg"
-                    alt="Ноутбук, руки на клавиатуре ноутбука"
+                    alt="Ноутбук, сайт проекта"
                     width="370"
                     height="294"
                   />
 
-                  <div class="project-description-overlay">
-                    <p class="overlay-text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis sapiente
-                      deleniti totam maxime at, rerum possimus atque in nobis iure quis voluptatibus
-                      excepturi fugiat, velit labore numquam delectus voluptas aspernatur.
+                  <div class="portfolio-cards__overlay">
+                    <p class="portfolio-cards__overlay_text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
 
-                <div class="border">
-                  <h2 class="photo-title">Growing Business</h2>
-                  <p class="photo-text">Приложение</p>
+                <div class="portfolio-cards__box_border">
+                  <h2 class="portfolio-cards__title portfolio-cards__title_name">Технокряк</h2>
+                  <p class="portfolio-cards__text_project">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -324,37 +336,41 @@
 
     <!--Footer-->
     <footer class="footer">
-      <div class="container footer-container">
-        <div class="footer-box">
-          <a href="./index.html" class="footer-logo"> <span class="accent-logo">Web</span>Studio</a>
-          <address class="address">
-            <ul class="footer-contacts">
-              <li class="contacts-item">
+      <div class="container container-flex">
+        <div class="adress-mr">
+          <a href="./index.html" class="logo footer-logo">
+            <span class="logo__accent">Web</span>Studio</a
+          >
+          <address class="adress">
+            <ul class="adress__list">
+              <li class="adress__item">
                 <a
                   href="https://goo.gl/maps/4b7uez3o3h5r4u1Y7"
-                  class="geoposition"
+                  class="adress__link-geoposition"
                   target="_blank"
                   rel="noopener norederrer"
                 >
                   г. Киев, пр-т Леси Украинки, 26
                 </a>
               </li>
-              <li class="contacts-item">
-                <a href="mailto:info@example.com" class="footer-email">info@example.com</a>
+              <li class="adress__item">
+                <a href="mailto:info@example.com" class="footer-email adress__link"
+                  >info@example.com</a
+                >
               </li>
-              <li class="contacts-item">
-                <a href="tel:+380991111111" class="footer-phone">+38 099 111 11 11</a>
+              <li class="adress__item">
+                <a href="tel:+380991111111" class="footer-phone adress__link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
-        <div class="join-us-box">
-          <p class="join-us-text">ПРИСОЕДИНЯЙТЕСЬ</p>
+        <div class="join-us">
+          <p class="join-us__text">ПРИСОЕДИНЯЙТЕСЬ</p>
 
-          <ul class="icon-footer-social">
-            <li class="icon-footer">
+          <ul class="social-bar footer__social-bar">
+            <li class="social-bar__item">
               <a
-                class="icon-footer-link"
+                class="social-bar__link social-bar__link_color container-flex"
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -364,9 +380,9 @@
                 </svg>
               </a>
             </li>
-            <li class="icon-footer">
+            <li class="social-bar__item">
               <a
-                class="icon-footer-link"
+                class="social-bar__link social-bar__link_color container-flex"
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -376,9 +392,9 @@
                 </svg>
               </a>
             </li>
-            <li class="icon-footer">
+            <li class="social-bar__item">
               <a
-                class="icon-footer-link"
+                class="social-bar__link social-bar__link_color container-flex"
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -388,9 +404,9 @@
                 </svg>
               </a>
             </li>
-            <li class="icon-footer">
+            <li class="social-bar__item">
               <a
-                class="icon-footer-link"
+                class="social-bar__link social-bar__link_color container-flex"
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -402,19 +418,20 @@
             </li>
           </ul>
         </div>
+
         <div class="subcribe-box">
-          <p class="subcribe-text">Подпишитесь на рассылку</p>
+          <p class="subcribe-box__text">Подпишитесь на рассылку</p>
           <form class="subcribe-form" autocomplete="off">
             <input
-              class="subscribe-input"
+              class="subcribe-form__input"
               type="email"
               name="subscribe"
               placeholder="E-mail"
               required
             />
-            <button type="submit" class="submit-subscribe-btn">
+            <button type="submit" class="subcribe-form__button">
               Подписаться
-              <svg class="icon-send" width="24" height="24">
+              <svg class="subcribe-form__icon containet-flex" width="24" height="24">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>

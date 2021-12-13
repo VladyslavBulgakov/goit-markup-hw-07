@@ -6,14 +6,9 @@
   margin-top: 20px;
 }
 
-.subscribe-input {
+.subcribe-form__input {
   width: 358px;
   height: 50px;
-
-  padding: 0;
-  margin-right: 12px;
-  padding-left: 15px;
-  padding-right: 15px;
 
   color: #ffffff;
   font-size: 16px;
@@ -21,12 +16,16 @@
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
+  margin: 0 12px 0 0;
+  padding: 0 15px 0 15px;
+
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
   background-color: var(--bcg-section-color);
 }
 
-.subscribe-input::placeholder {
+.subcribe-form__input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +35,7 @@
   outline: 1px solid var(--accent-color);
 }
 
-.submit-subscribe-btn {
+.subcribe-form__button {
   display: flex;
   align-items: center;
   text-align: center;
@@ -57,26 +56,20 @@
   border-radius: 4px;
 }
 
-.icon-send {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.subcribe-form__icon {
   margin-left: 10px;
   fill: #fff;
 
   transition: transform 250ms linear, fill 50ms linear;
 }
 
-.submit-subscribe-btn:hover .icon-send,
-.submit-subscribe-btn:focus .icon-send {
+.subcribe-form__button:hover .subcribe-form__icon,
+.subcribe-form__button:focus .subcribe-form__icon {
   transform: scale(1.1) translateY(-45%) translateX(40%);
 }
-.submit-subscribe-btn:active .icon-send {
-  fill: rgba(121, 158, 253, 0.837);
-}
-.subcribe-text {
-  display: flex;
+
+.subcribe-box__text {
+  display: block;
   width: 100%;
   color: #ffffff;
   font-weight: 700;

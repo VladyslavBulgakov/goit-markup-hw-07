@@ -1,21 +1,8 @@
-.features-padding {
+.features {
   padding-bottom: 0;
 }
 
-.features-list {
-  display: flex;
-
-  margin-top: 0;
-  padding-left: 0;
-}
-
-.features-list .list-item {
-  width: 270px;
-}
-.features-list .list-item:not(:last-child) {
-  margin-right: 30px;
-}
-.features-title {
+.features__title {
   color: var(--title-text-color);
 
   font-weight: bold;
@@ -25,18 +12,10 @@
   margin-top: 0;
   margin-bottom: 10px;
 }
-
-.icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// --------------------icon---------------------------
+.features__icon {
   background-color: var(--bcg-second-section-color);
   border-radius: 4px;
   margin-bottom: 30px;
-}
-.icon-box.antenna,
-.icon-box.clock,
-.icon-box.diagram,
-.icon-box.astronaut {
   height: 120px;
 }
