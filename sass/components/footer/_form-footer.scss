@@ -23,16 +23,16 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
   background-color: var(--bcg-section-color);
+
+  &:focus {
+    outline: 2px solid var(--accent-color);
+  }
 }
 
 .subcribe-form__input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.subscribe-input:focus {
-  outline: 1px solid var(--accent-color);
 }
 
 .subcribe-form__button {
@@ -63,9 +63,11 @@
   transition: transform 250ms linear, fill 50ms linear;
 }
 
-.subcribe-form__button:hover .subcribe-form__icon,
-.subcribe-form__button:focus .subcribe-form__icon {
-  transform: scale(1.1) translateY(-45%) translateX(40%);
+.subcribe-form__button {
+  &:hover .subcribe-form__icon,
+  &:focus .subcribe-form__icon {
+    transform: scale(1.1) translateY(-45%) translateX(40%);
+  }
 }
 
 .subcribe-box__text {

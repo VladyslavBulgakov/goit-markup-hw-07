@@ -23,10 +23,12 @@
     fill 250ms var(--transition-timing-function), transform 250ms linear;
 }
 
-.social-bar__link_bcg_color_rotate:focus,
-.social-bar__link_bcg_color_rotate:hover {
-  background-color: var(--accent-color);
+.social-bar__link_bcg_color_rotate {
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
 
-  fill: #ffffff;
-  transform: rotate(1turn);
+    fill: #ffffff;
+    transform: rotate(1turn);
+  }
 }
